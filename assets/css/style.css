@@ -1735,7 +1735,7 @@ select[multiple].input-lg {
   text-transform: uppercase;
 }
 .ul-unstyled,
-.site-nav ul {
+.horizontal-nav {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1750,7 +1750,8 @@ select[multiple].input-lg {
   padding-left: 0;
 }
 .stn-padding,
-.stn-services {
+.stn-services,
+.stn-portfolio {
   padding: 80px 0;
 }
 @font-face {
@@ -1844,6 +1845,31 @@ select[multiple].input-lg {
 .icon-dribbble:before {
   content: "\f17d";
 }
+.horizontal-nav li {
+  display: inline-block;
+  margin-left: 15px;
+}
+.horizontal-nav li a {
+  transition: all 0.3s ease-in-out;
+  display: block;
+  border: 2px solid transparent;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 17px;
+  line-height: 1;
+}
+.horizontal-nav li a.active {
+  border-color: #4bcaff;
+  color: #4bcaff;
+}
+.horizontal-nav li a:hover {
+  color: #4bcaff;
+}
+.horizontal-nav.black-font a {
+  color: #515f67;
+}
 body {
   font-family: 'Segoe', Arial, sans-serif;
   font-size: 14px;
@@ -1865,30 +1891,8 @@ body {
   background-color: rgba(72, 82, 90, 0.85);
   padding: 60px 0;
 }
-.site-nav ul {
+.site-nav .horizontal-nav {
   float: right;
-}
-.site-nav ul li {
-  display: inline-block;
-  margin-left: 15px;
-}
-.site-nav ul li a {
-  transition: all 0.3s ease-in-out;
-  display: block;
-  border: 2px solid transparent;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 10px 17px;
-  line-height: 1;
-}
-.site-nav ul li a.active {
-  border-color: #4bcaff;
-  color: #4bcaff;
-}
-.site-nav ul li a:hover {
-  color: #4bcaff;
 }
 .hero-heading {
   margin: 250px 0;
@@ -1917,6 +1921,9 @@ body {
   background: #fff;
   margin-top: 10px;
 }
+.stn-heading.black-line:after {
+  background: #515f67;
+}
 .stn-services {
   background: #4bcaff;
   color: #fff;
@@ -1933,4 +1940,18 @@ body {
   .stn-services [class^="col-"] {
     margin-bottom: 50px;
   }
+}
+.stn-portfolio .horizontal-nav {
+  float: right;
+}
+.stn-portfolio .stn-heading {
+  margin-bottom: 80px;
+}
+.thumbs-row [class^="col-"] {
+  margin-bottom: 30px;
+}
+.thumbs-row a {
+  display: block;
+  height: 270px;
+  background-color: pink;
 }
