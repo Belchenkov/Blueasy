@@ -1,6 +1,7 @@
 //forms, buttons, dialogs etc.
+
 //menu
-.horizontal-nav {
+.horizontal-nav{
   &:extend(.ul-unstyled);
 
   li {
@@ -13,24 +14,52 @@
       border: 2px solid transparent;
       color: #fff;
       font-weight: 600;
-      text-decoration: none;
       text-transform: uppercase;
+      text-decoration: none;
       padding: 10px 17px;
       line-height: 1;
 
       &.active {
         border-color: @accent;
-        color: @accent;
+        color:@accent;
       }
-
       &:hover {
-        color: @accent;
+        color:@accent;
       }
     }
-  }// li
-
+  }//li
+  
   &.black-font a {
     color: @font;
   }
+}
 
-}//horizontal-nav
+// iframe responsive
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
